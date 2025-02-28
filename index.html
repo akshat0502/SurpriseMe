@@ -1,0 +1,91 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise Me!</title>
+    <style>
+        body {
+            text-align: center;
+            padding: 50px;
+            font-family: Arial, sans-serif;
+            transition: background 0.5s;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Click the button for a surprise!</h1>
+    <button onclick="surprise()">Surprise Me</button>
+    <p id="message"></p>
+    <script>
+        function surprise() {
+            const surprises = [
+                () => document.body.style.background = `hsl(${Math.random() * 360}, 100%, 80%)`,
+                () => alert("🎉 Surprise! Have a great day! 🎈"),
+                () => document.getElementById("message").innerText = "Why don’t skeletons fight each other? They don’t have the guts! 😂",
+                () => {
+                    const audio = new Audio('https://www.myinstants.com/media/sounds/trollolol.mp3');
+                    audio.play();
+                },
+                () => {
+                    const confetti = document.createElement("div");
+                    confetti.innerText = "🎊🎊🎊";
+                    confetti.style.fontSize = "50px";
+                    confetti.style.position = "fixed";
+                    confetti.style.top = "50%";
+                    confetti.style.left = "50%";
+                    confetti.style.transform = "translate(-50%, -50%)";
+                    document.body.appendChild(confetti);
+                    setTimeout(() => confetti.remove(), 2000);
+                }
+            ];
+            const randomSurprise = surprises[Math.floor(Math.random() * surprises.length)];
+            randomSurprise();
+        }
+    </script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise Me!</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Click the button for a surprise!</h1>
+    <button onclick="surprise()">Surprise Me</button>
+    <script>
+        function surprise() {
+            const surprises = [
+                "🎉 Yay! You won an imaginary prize!",
+                "🤯 Did you know? Honey never spoils!",
+                "🐱 Here’s a fun fact: Cats have 32 muscles in each ear!",
+                "😂 Why don't skeletons fight each other? They don’t have the guts!",
+                "🎶 *Music starts playing* Just kidding, I can't play music."
+            ];
+            alert(surprises[Math.floor(Math.random() * surprises.length)]);
+        }
+    </script>
+</body>
+</html>
